@@ -1,8 +1,11 @@
 import React from 'react';
 import { Container, Content, Background } from './styled';
-import { FiLogIn } from 'react-icons/fi';
+import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 
 import LogoImg from '../../assets/logo.svg';
+
+import Input from '../../iu/components/Input';
+import Button from '../../iu/components/Button';
 
 const SingIn = () => {
   return (
@@ -12,11 +15,11 @@ const SingIn = () => {
         <form>
           <h1>Faça seu logon</h1>
 
-          <input placeholder='Email' />
+          <Input name='Email' icon={FiMail} placeholder='Email' />
 
-          <input type='password' placeholder='Senha' />
+          <Input name='Password' icon={FiLock} type='password' placeholder='Senha' />
 
-          <button type='submit'>Entrar</button>
+          <Button type='submit'>Entrar</Button>
 
           <a href='frango'>Esqueci minha senha</a>
         </form>
