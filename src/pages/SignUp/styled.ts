@@ -17,10 +17,13 @@ export const Content = styled.div`
   align-items: center;
 
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
+  img{
+    width: 160px;
+  }
 
   form {
-    margin: 80px 0;
+    margin:40px 0 80px 0;
     width: 340px;
     text-align: center;
 
