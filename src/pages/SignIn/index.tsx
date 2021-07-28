@@ -14,15 +14,16 @@ import getValidationErrors from '../../utils/getValidationErrors';
 
 import { AuthContext } from '../../Context/AuthContext';
 
-interface SignInFormData{
-  email:string
-  password:string
+interface SignInFormData {
+  email: string;
+  password: string;
 }
 
 const SingIn: React.FC = () => {
   const FormRef = useRef<FormHandles>(null);
 
-  const { signIn } = useContext(AuthContext);
+  const { signIn, user } = useContext(AuthContext);
+  console.log(user);
 
   const handleSubmit = useCallback(
     async (data: SignInFormData) => {
