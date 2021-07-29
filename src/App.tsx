@@ -4,7 +4,9 @@ import GlobalStyled from './iu/style/global';
 
 import SingIn from './pages/SignIn';
 // import SingUp from './pages/SignUp';
-import { AuthProvider } from './Context/AuthContext';
+
+import { AuthProvider } from './hooks/AuthContext';
+import ToastsContainer from './iu/components/ToastsContainer';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +14,9 @@ const App: React.FC = () => {
       <AuthProvider>
         <SingIn />
       </AuthProvider>
+
+      <ToastsContainer />
+
       <GlobalStyled />
     </>
   );
